@@ -18,10 +18,10 @@
   display: grid;
   align-items: center;
   position: relative;
-  gap: 55px 65.5px; 
+  gap: 55px 65.5px;
   padding-block-end: 66px; /* что то сделать с этим */
   padding-block-start: 66px; /* что то сделать с этим */
-  height: calc(100dvh - 10px);
+  height: 100dvh;
 }
 
 .header__decorative-element {
@@ -64,7 +64,7 @@
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
   left: 0;
-  bottom: var(--padding);
+  bottom: calc(var(--padding) + 10px);
 }
 
 .header__theme-menu {
@@ -94,6 +94,7 @@
 }
 
 .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
   pointer-events: none;
 }
 
@@ -136,6 +137,10 @@
   padding-block-start: 50px;
 }
 
+.block__first {
+  padding-block-start: 40px;
+}
+
 .article {
   display: flex;
   flex-direction: column;
@@ -168,10 +173,14 @@
     --padding: 20px;
   }
 
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .header__text {
     width: 50%;
     justify-self: end;
-    align-self: center;
+    align-self: start;
   }
 
   .header__decorative-element {
@@ -180,6 +189,10 @@
 
   .block {
     padding-block-start: 80px;
+  }
+
+  .block__first {
+    padding-block-start: 60px;
   }
 
   .article {
