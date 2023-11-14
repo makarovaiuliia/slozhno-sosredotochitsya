@@ -1,5 +1,4 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   color: var(--text-color);
   font-family: var(--main-font), sans-serif;
@@ -16,12 +15,10 @@
 
 .header {
   display: grid;
+  grid-template-rows: 1fr auto 1fr;
   align-items: center;
   position: relative;
-  gap: 55px 65.5px;
-  padding-block-end: 66px; /* что то сделать с этим */
-  padding-block-start: 66px; /* что то сделать с этим */
-  height: 100dvh;
+  block-size: calc(100dvh - var(--padding) * 2);
 }
 
 .header__decorative-element {
@@ -64,7 +61,7 @@
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
   left: 0;
-  bottom: calc(var(--padding) + 10px);
+  bottom: 0;
 }
 
 .header__theme-menu {
@@ -109,6 +106,7 @@
 
 .header__text {
   width: minmax(100%, 491px);
+  align-self: center;
 }
 
 .subtitle-decor {
@@ -137,10 +135,6 @@
   padding-block-start: 50px;
 }
 
-.block__first {
-  padding-block-start: 40px;
-}
-
 .article {
   display: flex;
   flex-direction: column;
@@ -150,6 +144,16 @@
 .link {
   text-shadow: 1.5px 1.5px 0px var(--accent-color);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  outline: 1px solid var(--accent-color);
+}
+
+.link:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .in-pictures__container {
@@ -158,14 +162,38 @@
 }
 
 .in-pictures-image {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .footer {
-  height: 100dvh;
+  block-size: calc(100dvh - var(--padding) * 2);
+  margin-block-start: var(--padding);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  right: 0;
+  top: 0;
+}
+
+.footer::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  left: 0;
+  bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -178,9 +206,8 @@
   }
 
   .header__text {
-    width: 50%;
+    inline-size: 50%;
     justify-self: end;
-    align-self: start;
   }
 
   .header__decorative-element {
@@ -189,10 +216,6 @@
 
   .block {
     padding-block-start: 80px;
-  }
-
-  .block__first {
-    padding-block-start: 60px;
   }
 
   .article {
@@ -244,7 +267,7 @@
 
   .in-pictures-image {
     object-fit: cover;
-    height: 100%;
+    block-size: 100%;
   }
 }
 
@@ -255,7 +278,17 @@
   }
 
   .title__cause {
-    width: 33%;
+    inline-size: 33%;
     grid-column: 1/4;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: 13px;
   }
 }

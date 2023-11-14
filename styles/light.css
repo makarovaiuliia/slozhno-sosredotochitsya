@@ -44,6 +44,14 @@
     border-left: 1px solid var(--text-color);
     border-bottom: 1px solid var(--text-color);
   }
+
+  .link:hover {
+    outline: 1px solid var(--text-color);
+  }
+
+  .link:focus-visible {
+    border-bottom: 1px solid var(--text-color);
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -89,6 +97,14 @@
 
   .header::after {
     border-left: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .link:hover {
+    outline: 1px solid var(--text-color);
+  }
+
+  .link:focus-visible {
     border-bottom: 1px solid var(--text-color);
   }
 }
