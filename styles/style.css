@@ -18,7 +18,7 @@
   display: grid;
   align-items: center;
   position: relative;
-  gap: 55px 65.5px; /* что то сделать с этим */
+  gap: 55px 65.5px; 
   padding-block-end: 66px; /* что то сделать с этим */
   padding-block-start: 66px; /* что то сделать с этим */
   height: calc(100dvh - 10px);
