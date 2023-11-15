@@ -1,5 +1,4 @@
 .page {
-  margin: 0 auto;
   padding: var(--padding);
   color: var(--text-color);
   font-family: var(--main-font), sans-serif;
