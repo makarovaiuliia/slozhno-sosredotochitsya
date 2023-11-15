@@ -218,16 +218,16 @@
     padding-block-start: 80px;
   }
 
-  .article {
-    gap: 20px;
-  }
-
   .block__reasons {
     grid-template-columns: 1fr 2fr;
   }
 
   .title__reasons {
     grid-row: 1/3;
+  }
+
+  .title__cause {
+    inline-size: 20%;
   }
 
   .block__advice {
