@@ -1,18 +1,11 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 .page.theme_dark {
   --bg-color: #000028;
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
 
   background-image: url(/images/cover-image-dark.png);
-  
 
   .header__title {
     color: #db00ff;
   }
-
 }
