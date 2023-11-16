@@ -78,6 +78,7 @@
   color: var(--accent-color-2);
   background-color: transparent;
   cursor: pointer;
+  padding: 0 13px;
 }
 
 .header__theme-menu-button:focus {
@@ -155,6 +156,11 @@
   outline: none;
 }
 
+.advice__list {
+  display: grid;
+  gap: 20px;
+}
+
 .gallery {
   gap: 10px;
   margin-block-end: 50px;
@@ -183,7 +189,7 @@
 @media (min-width: 768px) {
 
   .header__title {
-    margin-inline-start: -20px;
+    margin-inline-start: -20px; /* по макету заголовок располагается около края без огладки на padding */
   }
 
   .header__text {
@@ -200,7 +206,7 @@
   }
 
   .block__reasons {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.975fr 2fr;
   }
 
   .title__reasons {
@@ -216,11 +222,6 @@
   }
 
   .advice__article {
-    display: grid;
-    gap: 20px;
-  }
-
-  .advice__list {
     display: grid;
     gap: 20px;
   }
@@ -267,7 +268,7 @@
 }
 
 @media (min-width: 1024px) {
-
+  
   .block__cause {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
