@@ -211,7 +211,7 @@
   }
 
   .block__reasons {
-    grid-template-columns: 0.975fr 2fr;
+    grid-template-columns: 0.98fr 2fr;
   }
 
   .title__reasons {
@@ -267,10 +267,14 @@
 }
 
 @media (min-width: 1024px) {
-  
+
   .block__cause {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
+  }
+
+  .block__reasons {
+    grid-template-columns: 0.975fr 2fr;
   }
 
   .title__cause {
