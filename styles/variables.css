@@ -8,7 +8,20 @@
   --text-color: #f1b2ce;
   --main-font: 'IBM Plex mono';
   --text-size: 18px;
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --accent-color: #ff0070;
+  --accent-color-2: #ff0070;
   --title-color: #db00ff;
+  --title-decor-color: #000028;
   --padding: 10px;
+  --hover-color: rgba(255 0 112 / 0.4);
+  --bg-image: url(../images/cover-image-dark.png);
+}
+
+@media (min-width: 768px) {
+
+  :root {
+    --padding: 20px;
+    --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
