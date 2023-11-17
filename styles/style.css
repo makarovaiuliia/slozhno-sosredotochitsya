@@ -195,7 +195,7 @@
 }
 
 @media (min-width: 768px) {
-
+  
   .header__title {
     margin-inline-start: -20px;
   }
@@ -213,7 +213,8 @@
     padding-block-start: 80px;
   }
 
-  .block__reasons {
+  .block__reasons,
+  .block__advice {
     grid-template-columns: 1fr 2fr;
   }
 
@@ -225,17 +226,12 @@
     inline-size: 20%;
   }
 
-  .block__advice {
-    grid-template-columns: 1fr 2fr;
-  }
-
   .title_advice {
     grid-row: 1 / 2;
   }
 
   .gallery__container {
     grid-template-columns: 1fr 1fr 1fr;
-
     grid-template-areas:
       'sunset sunset ice-cream'
       'tape books ice-cream'
@@ -270,7 +266,7 @@
 }
 
 @media (min-width: 1024px) {
-  
+
   .block__cause {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
@@ -288,5 +284,10 @@
 
   .header__theme-menu-list {
     display: flex;
+  }
+
+  .block__reasons,
+  .block__advice {
+    grid-template-columns: 0.975fr 2fr;
   }
 }
