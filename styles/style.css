@@ -44,8 +44,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  border-inline-start: 1px solid var(--accent-color-2);
-  border-block-end: 1px solid var(--accent-color-2);
+  border-inline-start: 1px solid var(--decoration-color);
+  border-block-end: 1px solid var(--decoration-color);
   inline-size: 25px;
   block-size: 25px;
   inset-inline-start: 0;
@@ -55,8 +55,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  border-inline-end: 1px solid var(--accent-color-2);
-  border-block-start: 1px solid var(--accent-color-2);
+  border-inline-end: 1px solid var(--decoration-color);
+  border-block-start: 1px solid var(--decoration-color);
   inline-size: 25px;
   block-size: 25px;
   inset-inline-end: 0;
@@ -75,7 +75,7 @@
 
 .header__theme-menu-button {
   border: none;
-  color: var(--accent-color-2);
+  color: var(--decoration-color);
   background-color: transparent;
   cursor: pointer;
   padding: 0 13px;
@@ -86,12 +86,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color-2);
+  border-block-end: 1px solid var(--decoration-color);
   outline: none;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color-2);
+  outline: 1px solid var(--decoration-color);
   pointer-events: none;
 }
 
@@ -99,7 +99,7 @@
   outline: 1px solid var(--hover-color);
 }
 
-.header__title {
+.main-title {
   color: var(--title-color);
   font-weight: 700;
   font-size: var(--title-size);
@@ -113,7 +113,7 @@
 }
 
 .title {
-  color: var(--accent-color-2);
+  color: var(--decoration-color);
   font-weight: 700;
   font-size: inherit;
 }
@@ -148,12 +148,15 @@
 }
 
 .link:hover {
-  outline: 1px solid var(--accent-color-2);
+  border-block-end: 1px solid var(--decoration-color);
+}
+
+.link:focus {
+  outline: none;
 }
 
 .link:focus-visible {
-  border-block-end: 1px solid var(--accent-color-2);
-  outline: none;
+  outline: 1px solid var(--decoration-color);
 }
 
 .advice__article {
@@ -194,7 +197,7 @@
 @media (min-width: 768px) {
 
   .header__title {
-    margin-inline-start: -20px; /* по макету заголовок располагается около края без огладки на padding */
+    margin-inline-start: -20px;
   }
 
   .header__text {
@@ -211,7 +214,7 @@
   }
 
   .block__reasons {
-    grid-template-columns: 0.98fr 2fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   .title__reasons {
@@ -267,14 +270,10 @@
 }
 
 @media (min-width: 1024px) {
-
+  
   .block__cause {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
-  }
-
-  .block__reasons {
-    grid-template-columns: 0.975fr 2fr;
   }
 
   .title__cause {
